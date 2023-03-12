@@ -37,7 +37,6 @@
         android:id="@+id/btnTestServer"
         android:layout_width="132dp"
         android:layout_height="63dp"
-        android:background="#04799c"
         android:text="Server Test"
         android:onClick="buttonSRVClick"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -48,12 +47,11 @@
         app:layout_constraintVertical_bias="0.755" />
 
     <Button
-        android:id="@+id/btnSumCheck"
+        android:id="@+id/btnPrimCheck"
         android:layout_width="132dp"
         android:layout_height="63dp"
-        android:background="#04799c"
         android:text="Primzahlen Check"
-        android:onClick="buttonCheckSum"
+        android:onClick="buttonPrimzahlen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintLeft_toLeftOf="parent"

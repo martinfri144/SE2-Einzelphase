@@ -23,7 +23,8 @@ public class ConnectionThread extends Thread {
     @Override
     public void run() {
         try {
-            clientSocket = new Socket("se2-isys.aau.at", 53212);outToServer = new DataOutputStream(clientSocket.getOutputStream());
+            clientSocket = new Socket("se2-isys.aau.at", 53212);
+            outToServer = new DataOutputStream(clientSocket.getOutputStream());
             inFromServer = new BufferedReader((new InputStreamReader(clientSocket.getInputStream())));
 
             outToServer.writeBytes(mtnToServer + '\n');
