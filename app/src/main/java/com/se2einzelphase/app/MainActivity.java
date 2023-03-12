@@ -25,6 +25,16 @@ public class MainActivity extends AppCompatActivity {
         showReplyServer = findViewById(R.id.textViewReplyServer);
 
         String mtnToSrv = mtn.getText().toString();
+        ConnectionThread c = new ConnectionThread(mtnToSrv);
+        c.start();
+        try {
+            c.join();
+        }
+        catch (InterruptedException ie) {
+            showReplyServer.setText("fehler");
+        }
+
+        showReplyServer.setText(c.returnMtn());
 
     }
 
